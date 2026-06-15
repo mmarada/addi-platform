@@ -171,7 +171,7 @@ export default function AddStudyPage() {
             ["Alzheimer's disease (AD) Unspecified", "adUnspecified"],
           ].map(([label, key]) => (
             <FormRow key={key} label={label}>
-              <input value={(form as Record<string, string>)[key]} onChange={(e) => set(key, e.target.value)} className="addi-input" />
+              <input value={(form as unknown as Record<string, string>)[key]} onChange={(e) => set(key, e.target.value)} className="addi-input" />
             </FormRow>
           ))}
 
